@@ -1,0 +1,32 @@
+{
+  "editor.formatOnSave": true, //保存时自动格式化代码
+  // 根据打开文件的内容自动检测 #editor.tabSize#和#editor.intertSpaces#
+  // 例如虽然下面设置的 tabSize 为 4，但是当前文件打开时是文件内容的 tabSize 为 2，所以依然会沿用 2，如果设置为 false，后续的 tabSize 则会使用 4
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": true, //是否使用空格
+  "editor.tabSize": 4, // 空格或者制表符的大小
+  "editor.fontSize": 14, // 编辑器字体大小
+  "editor.rulers": [80, 100], // 垂直标尺，会在指定列号处显示竖线
+  "editor.wordWrap": "wordWrapColumn", // 控制换行方式
+  "editor.wordWrapColumn": 100, // 控制换行的宽度
+  "prettier.useEditorConfig": false,
+  "files.trimTrailingWhitespace": false,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/build": true,
+    "**/deploy.sh": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.enable": true,
+  "prettier.enable": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
