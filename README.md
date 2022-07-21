@@ -4,7 +4,7 @@
 
 缩进的代码风格到底是 2 个空格还是 4 个空格是受谁控制的？VS Code 默认设置？还是 Prettier?
 
-1、`.vscode/settings.json` 中的 `"editor.tabSize": 4`，不过如果设置 `"editor.detectIndentation": true` , 就会根据打开文件的内容自动检测，例如虽然设置的 tabSize 为 2，但是当前文件打开时是文件内容的 tabSize 为 2，所以依然会沿用 2，如果设置为 false，后续的 tabSize 则会使用 4
+1、`.vscode/settings.json` 中的 `"editor.tabSize": 4`，不过如果设置 `"editor.detectIndentation": true` , 就会根据打开文件的内容自动检测，例如虽然设置的 tabSize 为 4，但是当前文件打开时文件内容的 tabSize 为 2，所以依然会沿用 2，如果设置为 false，后续的 tabSize 则会使用 4
 
 ```json
 {
