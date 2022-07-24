@@ -7,11 +7,19 @@
             "lint": "eslint .",
             "fix-lint": "eslint . --cache --fix",
             "format": "prettier --write src/",
-            "prepare": "husky install"
+            "prepare": "husky install",
+            "babel-dev": "babel src --out-dir lib"
       },
       "author": "qiqihaobenben",
       "license": "ISC",
       "devDependencies": {
+            "@babel/cli": "^7.18.9",
+            "@babel/core": "^7.18.9",
+            "@babel/generator": "^7.18.9",
+            "@babel/parser": "^7.18.9",
+            "@babel/preset-env": "^7.18.9",
+            "@babel/traverse": "^7.18.9",
+            "@babel/types": "^7.18.9",
             "@commitlint/cli": "^17.0.3",
             "@commitlint/config-conventional": "^17.0.3",
             "browserslist": "^4.21.2",
@@ -32,5 +40,13 @@
                   "path": "./node_modules/cz-git"
             }
       },
-      "browserslist": ["> 0.2%", "last 2 versions", "not dead", "Firefox ESR"]
+      "browserslist": [
+            "> 0.2%",
+            "last 2 versions",
+            "not dead",
+            "Firefox ESR"
+      ],
+      "dependencies": {
+            "core-js": "^2.6.12"
+      }
 }
