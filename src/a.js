@@ -3,15 +3,18 @@
  * @Date: 2022-07-20 16:42:18
  * @Description:
  * @LastEditors: chenfangxu
- * @LastEditTime: 2022-07-24 23:20:59
+ * @LastEditTime: 2022-07-26 16:31:54
  * @FilePath: /vscode-linter-example/src/a.js
  */
 // import traverse from "@babel/traverse"
-import "core-js"
+import "core-js/stable"
 let t = require("@babel/types")
 let b = "console.log(1);"
-var a = new Promise(() => {})
-a.then(() => {})
+class B {}
+
+console.log(B)
+
+new Promise()
 
 const ast = require("@babel/parser").parse(b)
 
