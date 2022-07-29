@@ -1,47 +1,62 @@
 (function() { // webpackBootstrap
 	"use strict";
 	var __webpack_modules__ = ([
-/* 0 */,
-/* 1 */
-(function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/* 0 */
+(function(module, __unused_webpack___webpack_exports__, __webpack_require__) {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _heading_md__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+
+;// CONCATENATED MODULE: ./webpack/heading.js
 /*
  * @Author: chenfangxu
  * @Date: 2022-07-28 10:49:26
  * @Description:
  * @LastEditors: chenfangxu
- * @LastEditTime: 2022-07-28 20:06:07
+ * @LastEditTime: 2022-07-29 17:28:35
  * @FilePath: /vscode-linter-example/webpack/heading.js
  */
 // ./src/heading.js
 
 // import demo from "./text"
+// import md from "./heading.md"
+// import "./heading.css"
 
-console.log(_heading_md__WEBPACK_IMPORTED_MODULE_0__["default"])
-
-/* harmony default export */ __webpack_exports__["default"] = (() => {
+const createHeading = () => {
   const element = document.createElement("h2")
 
-  element.textContent = "Hello webpack"
-  element.innerHTML = _heading_md__WEBPACK_IMPORTED_MODULE_0__["default"]
+  element.textContent = "Hello webpack1"
+  element.contentEditable = true
 
-  element.addEventListener("click", () => alert("Hello webpack"))
+  // element.addEventListener("click", () => alert("Hello webpack"))
 
   return element
-});
+}
+
+const a = () => {
+  console.log(a)
+}
+
+;// CONCATENATED MODULE: ./webpack/index.js
+/* module decorator */ module = __webpack_require__.hmd(module);
+/*
+ * @Author: chenfangxu
+ * @Date: 2022-07-28 10:49:01
+ * @Description:
+ * @LastEditors: chenfangxu
+ * @LastEditTime: 2022-07-29 17:11:47
+ * @FilePath: /vscode-linter-example/webpack/index.js
+ */
+// ./src/index.js
 
 
-}),
-/* 2 */
-(function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<!-- ./src/about.md -->\n\n<h1 id=\"about\">About</h1>\n<p>this is a markdown file.</p>\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
+const heading = createHeading()
+
+document.body.append(heading)
+
+module.hot.accept("./heading.js", () => {
+  console.log("更新了")
+})
+
 
 })
 	]);
@@ -57,50 +72,42 @@ var code = "<!-- ./src/about.md -->\n\n<h1 id=\"about\">About</h1>\n<p>this is a
 		}
 		// Create a new module (and put it into the cache)
 		var module = __webpack_module_cache__[moduleId] = {
-			// no module.id needed
-			// no module.loaded needed
+			id: moduleId,
+			loaded: false,
 			exports: {}
 		};
 	
 		// Execute the module function
 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 	
+		// Flag the module as loaded
+		module.loaded = true;
+	
 		// Return the exports of the module
 		return module.exports;
 	}
 	
-	/* webpack/runtime/make namespace object */
+	/* webpack/runtime/harmony module decorator */
 	!function() {
-		// define __esModule on exports
-		__webpack_require__.r = function(exports) {
-			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-			}
-			Object.defineProperty(exports, '__esModule', { value: true });
+		__webpack_require__.hmd = function(module) {
+			module = Object.create(module);
+			if (!module.children) module.children = [];
+			Object.defineProperty(module, 'exports', {
+				enumerable: true,
+				set: function() {
+					throw new Error('ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: ' + module.id);
+				}
+			});
+			return module;
 		};
 	}();
 	
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-!function() {
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _heading_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/*
- * @Author: chenfangxu
- * @Date: 2022-07-28 10:49:01
- * @Description:
- * @LastEditors: chenfangxu
- * @LastEditTime: 2022-07-28 10:51:39
- * @FilePath: /vscode-linter-example/webpack/index.mjs
- */
-// ./src/index.js
-
-
-
-const heading = (0,_heading_js__WEBPACK_IMPORTED_MODULE_0__["default"])()
-
-document.body.append(heading)
-
-}();
+	
+	// startup
+	// Load entry module and return exports
+	// This entry module is referenced by other modules so it can't be inlined
+	var __webpack_exports__ = __webpack_require__(0);
+	
 })()
 ;
+//# sourceMappingURL=main.js.map

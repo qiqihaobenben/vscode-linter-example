@@ -1,6 +1,6 @@
-<!-- ./src/about.md -->
+<!-- ./src/heading.md -->
 
-# About
+# Heading
 
 
 

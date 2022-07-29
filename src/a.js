@@ -3,11 +3,13 @@
  * @Date: 2022-07-20 16:42:18
  * @Description:
  * @LastEditors: chenfangxu
- * @LastEditTime: 2022-07-26 16:31:54
+ * @LastEditTime: 2022-07-29 17:40:57
  * @FilePath: /vscode-linter-example/src/a.js
  */
 // import traverse from "@babel/traverse"
 import "core-js/stable"
+import { createHeading } from "../webpack/heading"
+console.log(createHeading)
 let t = require("@babel/types")
 let b = "console.log(1);"
 class B {}
